@@ -1,27 +1,481 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
 
 :root {
-  
+    --almost-white: #fafafa;
+    --light-grey: #adadad;
+    --medium-grey: #686868;
+    --black: #151515;
+    --pure-white: #ffffff;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  img {
+}
+
+img {
     width: 100%;
     max-width: 100%;
-  }
-  
-  html,
-  body {
-    font-family: 'Epilogue', sans-serif;
-    font-size: 15px;
-  }
+}
 
-  body {
+a {
+    text-decoration: none;
+    color: none;
+}
+
+button {
+    border: none;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: -1.11px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: var(--medium-grey);
+}
+
+.btn__primary {
+    font-size: 18px;
+    font-weight: 700;
+    width: 165px;
+    background-color: var(--black);
+    color: var(--almost-white);
+    border-radius: 15px;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.btn__primary:hover {
+    background-color: var(--pure-white);
+    color: var(--black);
+    border: 1px solid var(--black) !important;
+}
+
+.btn__secondary {
+    width: 105px;
+    display: block;
+    border: 1.5px solid var(--medium-grey);
+    border-radius: 15px;
+    color: var(--medium-grey);
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.btn__secondary:hover {
+    border-color: var(--black);
+    color: var(--black);
+}
+
+.link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: var(--medium-grey);
+}
+
+.link:hover {
+    color: var(--black);
+}
+
+.container {
+    max-width: 1145px;
+    margin: 0 auto;
+}
+
+html,
+body {
+    font-family: "Epilogue", sans-serif;
+    font-size: 15px;
+}
+
+body {
     width: 100vw;
     height: 100vh;
-  }
+}
+
+header {
+    margin-top: 30px;
+}
+
+.nav__container {
+    max-width: 1355px;
+}
+
+.logo {
+    width: 80px;
+    height: 20px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+}
+
+.nav__list {
+    margin-left: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    margin-left: 25px;
+}
+
+.nav__item:first-child {
+    margin-left: 0;
+}
+
+.icon__link {
+    font-size: 8px;
+    margin-left: 5px;
+}
+
+.feature__links {
+    position: absolute;
+    padding: 25px 25px;
+    background-color: var(--pure-white);
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 40px rgb(0, 0, 0, 0.15));
+    top: 20px;
+    left: -70px;
+    display: none;
+}
+
+.feature__links.active {
+    display: block;
+}
+
+.feature__icon {
+    transition: transform 0.5s ease-in-out;
+}
+
+.feature__icon.open {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.feature__link {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.feature__link:first-child {
+    margin-top: 0;
+}
+
+.icon-todo {
+    width: 14px;
+}
+
+.icon-calendar {
+    width: 16px;
+}
+
+.icon-reminders {
+    width: 12px;
+}
+
+.icon-planning {
+    width: 16px;
+}
+
+.feature__link-text.link {
+    margin-left: 15px;
+}
+
+.company__links {
+    position: absolute;
+    padding: 25px 25px;
+    background-color: var(--pure-white);
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 40px rgb(0, 0, 0, 0.15));
+    top: 20px;
+    left: 100px;
+    display: none;
+}
+
+.company__link {
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.company__link:first-child {
+    margin-top: 0;
+}
+
+.company__links.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.company__icon {
+    transition: transform 0.5s ease-in-out;
+}
+
+.company__icon.open {
+    transform: rotate(180deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.link__login {
+    margin-left: 630px;
+}
+
+.btn__secondary {
+    margin-left: 40px;
+}
+
+.burger {
+    display: none;
+}
+
+.nav__list {
+    list-style: none;
+}
+
+main {
+    margin-top: 65px;
+}
+
+.main__content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.main__content-text {
+    max-width: 515px;
+}
+
+.main__text {
+    max-width: 445px;
+    margin: 50px 0 50px 0;
+}
+
+.main__content-logos {
+    margin-top: 110px;
+    display: flex;
+    align-items: center;
+}
+
+.databiz-logo {
+    width: 115px;
+}
+
+.audiophile-logo {
+    width: 75px;
+}
+
+.meet-logo {
+    width: 90px;
+}
+
+.maker-logo {
+    width: 80px;
+}
+
+.main__logo {
+    margin-left: 40px;
+}
+
+.main__content-img {
+    background: url(../img/image-hero-desktop.png);
+    width: 480px;
+    height: 640px;
+    background-size: contain;
+}
+
+@media (max-width: 375px) {
+    .nav__container {
+        max-width: 345px;
+    }
+
+    .header__content {
+        justify-content: space-between;
+    }
+
+    .burger {
+        display: block;
+        width: 32px;
+        height: 18px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1;
+    }
+
+    .burger span {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .burger span::before, .burger span::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .burger span::before {
+        transform: translateY(-10px);
+    }
+
+    .burger span::after {
+        transform: translateY(10px);
+    }
+
+    .burger.active span {
+        background-color: transparent;
+    }
+
+    .burger.active span::before {
+        transform: translateY(0px) rotateZ(45deg);
+    }
+
+    .burger.active span::after {
+        transform: translateY(0px) rotateZ(-45deg);
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 240px;
+        height: 100%;
+        background: var(--pure-white);
+        padding-top: 80px;
+        padding-left: 25px;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+    }
+
+    .nav.open {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: baseline;
+    }  
+
+    .nav__item {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .nav__item:first-child {
+        margin-top: 0;
+    }
+
+    .nav__item:nth-child(5) {
+        margin-top: 30px;
+    }
+
+    .link__login {
+        margin-left: 80px;
+    }
+
+    .btn__secondary {
+        margin-left: 0;
+        width: 195px;
+        text-align: center;
+    }
+
+    .feature__links {
+        position: inherit;
+        background-color: var(--pure-white);
+        filter: none;
+    }
+
+    .company__links {
+        position: inherit;
+        background-color: var(--pure-white);
+        filter: none;
+    }
+
+    .container {
+        max-width: 345px;
+    }
+
+    main {
+        margin-top: 25px;
+        margin-bottom: 95px;
+    }
+
+    .main__content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .main__content-img {
+        background: url(../img/image-hero-mobile.png) no-repeat;
+        width: 100%;
+        height: 280px;
+        background-size: contain;
+    }
+
+    .main__content-text {
+        max-width: 100%;
+    }
+
+    .main__title {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: -0.5px;
+    }
+
+    .main__text {
+        max-width: 100%;
+        margin: 15px 0 25px 0;
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .main__content-logos {
+        margin-top: 50px;
+    }
+
+    .databiz-logo {
+        width: 80px;
+    }
+    
+    .audiophile-logo {
+        width: 50px;
+    }
+    
+    .meet-logo {
+        width: 65px;
+    }
+    
+    .maker-logo {
+        width: 60px;
+    }
+
+    .main__logo {
+        margin-left: 30px;
+    }
+
+    .main__logo:first-child {
+        margin-left: 0;
+    }
+}
